@@ -13,3 +13,11 @@ const mybutton = document.getElementsByClassName('button')[0];
 mybutton.addEventListener('click', addStatRow, false);
 
 console.log(1+1);
+
+
+fetch("https://google.com")
+    .then( response=> {
+        if (!response.ok) {
+            throw new Error('HTTP error ${response.status}')
+        };
+        return response.text();})
